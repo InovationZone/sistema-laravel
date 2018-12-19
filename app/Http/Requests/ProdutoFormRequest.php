@@ -4,7 +4,7 @@ namespace sistemaLaravel\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CategoriaFormRequest extends FormRequest
+class ProdutoFormRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,8 +24,12 @@ class CategoriaFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'nome'=>'required|max:256',
-            'descricao'=>'max:256',
+            'idcategoria'=>'required',
+            'codigo'=>'required|max:50',
+            'nome'=>'required|max:50',
+            'estoque'=>'required|numeric',
+            'descricao'=>'required|max:512',
+            'imagem'=>'mimes:jpeg,bmp,png',
         ];
     }
 }

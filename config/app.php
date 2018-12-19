@@ -80,7 +80,7 @@ return [
     |
     */
 
-    'locale' => 'pt-br-br',
+    'locale' => 'pt-br',
 
     /*
     |--------------------------------------------------------------------------
@@ -171,7 +171,7 @@ return [
          */
         sistemaLaravel\Providers\AppServiceProvider::class,
         sistemaLaravel\Providers\AuthServiceProvider::class,
-        // sistemaLaravel\Providers\BroadcastServiceProvider::class,
+        sistemaLaravel\Providers\BroadcastServiceProvider::class,
         sistemaLaravel\Providers\EventServiceProvider::class,
         sistemaLaravel\Providers\RouteServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,

@@ -4,7 +4,7 @@ namespace sistemaLaravel\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CategoriaFormRequest extends FormRequest
+class PessoaFormRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,8 +24,12 @@ class CategoriaFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'nome'=>'required|max:256',
-            'descricao'=>'max:256',
+            'nome'=>'required|max:100',
+            'tipo_documento'=>'max:20',
+            'num_doc'=>'max:50',
+            'endereco'=> 'required|max:100',
+            'telefone'=>'required|max:20',
+            'email'=>'required|max:50',
         ];
     }
 }
